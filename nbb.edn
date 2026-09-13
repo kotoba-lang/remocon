@@ -1,0 +1,2 @@
+;; Classpath for nbb. Prefer `kbb --backend sci` / package.json scripts over bb.edn.
+{:paths ["src" "test"]}
