@@ -1,5 +1,5 @@
 (ns remocon.nec-test
-  (:require [clojure.test :refer [deftest is testing]]
+  (:require [kotoba.test :refer [deftest is testing]]
             [remocon.nec :as nec]
             [remocon.raw :as raw]))
 

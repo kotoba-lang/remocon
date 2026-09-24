@@ -16,7 +16,7 @@
   (protocol, address, command) triple; a match returns the entry, not a
   boolean, so callers can reuse its provenance."
 
-  (:require [clojure.string :as str]))
+  (:require [kotoba.lang.text :as str]))
 
 (defn entry-error
   "Reason `e` is not a valid ledger entry, or nil."
@@ -67,5 +67,5 @@
   "All entries for `device` (case-insensitive), as {:function :command ...} maps."
   [ledger device]
   (->> ledger
-       (filter (fn [e] (some-> e :device str/lower-case (= (str/lower-case device)))))
+       (filter (fn [e] (some-> e :device str/lower (= (str/lower device)))))
        (mapv (fn [e] {:function (:function e) :command (:command e)}))))

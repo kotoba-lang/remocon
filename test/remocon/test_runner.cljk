@@ -1,7 +1,7 @@
 (ns remocon.test-runner
   "Minimal explicit test runner — a missing test namespace must be a visible
   failure, never a silent green. Runs on JVM (clojure -M:test) and nbb."
-  (:require [clojure.test :as t]))
+  (:require [kotoba.test :as t]))
 
 (defn- run-all
   []

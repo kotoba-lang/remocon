@@ -17,7 +17,7 @@
   do not match the word list all throw."
 
   (:require [remocon.raw :as raw]
-            [clojure.string :as str]))
+            [kotoba.lang.text :as str]))
 
 (def ^:const pronto-clock-hz 2.41246)   ; the Pronto clock: 1 unit = 414.5156 us
 (def ^:const pronto-clock-us 414.5156)
